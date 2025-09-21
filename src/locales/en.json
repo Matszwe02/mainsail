@@ -944,7 +944,8 @@
         "Machine": "Machine",
         "Printers": "Printers",
         "Timelapse": "Timelapse",
-        "Webcam": "Webcam"
+        "Webcam": "Webcam",
+        "Slicer": "Slicer"
     },
     "ScrewsTiltAdjust": {
         "Accept": "accept",

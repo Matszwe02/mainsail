@@ -5,6 +5,7 @@ import Console from '../pages/Console.vue'
 import Files from '../pages/Files.vue'
 import History from '../pages/History.vue'
 import Timelapse from '../pages/Timelapse.vue'
+import Slicer from '../pages/Slicer.vue'
 import Machine from '../pages/Machine.vue'
 import { AsyncComponent, Component } from 'vue'
 
@@ -18,6 +19,7 @@ import {
     mdiHistory,
     mdiTimelapse,
     mdiWrench,
+    mdiCubeScan, // Added for slicer
 } from '@mdi/js'
 
 const routes: AppRoute[] = [
@@ -73,6 +75,17 @@ const routes: AppRoute[] = [
         position: 40,
     },
     {
+        name: 'slicer',
+        title: 'Slicer',
+        path: '/slicer',
+        icon: mdiCubeScan,
+        component: Slicer,
+        alwaysShow: true,
+        showInNavi: true,
+        position: 50,
+        fullscreen: true,
+    },
+    {
         name: 'gcodefiles',
         title: 'G-Code Files',
         path: '/files',
@@ -81,7 +94,7 @@ const routes: AppRoute[] = [
         alwaysShow: true,
         showInNavi: true,
         registeredDirectory: 'gcodes',
-        position: 50,
+        position: 60,
         fullscreen: true,
     },
     {
@@ -92,7 +105,7 @@ const routes: AppRoute[] = [
         component: () => import('../pages/Viewer.vue'),
         alwaysShow: true,
         showInNavi: true,
-        position: 60,
+        position: 70,
         fullscreen: true,
     },
     {
@@ -104,7 +117,7 @@ const routes: AppRoute[] = [
         alwaysShow: true,
         showInNavi: true,
         moonrakerComponent: 'history',
-        position: 70,
+        position: 80,
     },
     {
         name: 'timelapse',
@@ -115,7 +128,7 @@ const routes: AppRoute[] = [
         alwaysShow: true,
         showInNavi: true,
         moonrakerComponent: 'timelapse',
-        position: 80,
+        position: 90,
     },
     {
         name: 'machine',
@@ -125,7 +138,7 @@ const routes: AppRoute[] = [
         component: Machine,
         alwaysShow: true,
         showInNavi: true,
-        position: 90,
+        position: 100,
     },
     {
         title: null,
